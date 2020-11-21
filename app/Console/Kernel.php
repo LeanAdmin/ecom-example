@@ -24,7 +24,7 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        $schedule->command('migrate:fresh', ['--seed'])->everyFiveMinutes();
+        $schedule->command('migrate:fresh', ['--seed' => true, '--force' => true])->everyFiveMinutes();
     }
 
     /**
