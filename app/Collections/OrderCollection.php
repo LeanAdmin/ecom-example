@@ -9,8 +9,6 @@ class OrderCollection extends Collection
 {
     public function total()
     {
-        return $this->sum(function (Order $order) {
-            return $order->products->sum('total');
-        });
+        return $this->sum('total');
     }
 }

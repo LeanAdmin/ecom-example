@@ -18,6 +18,7 @@ This is a simple e-commerce application based on Jetstream. There's no customer-
 Jetstream is used to demonstrate the `auth` protection of admin routes.
 
 - Custom page showing statistics
+- Custom Create Order action
 - A simple e-commerce app
   - Orders
   - Products
