@@ -2,6 +2,8 @@
 
 This is an example app for Lean Admin. It can serve as a reference for whenever you want to see something in practice rather than reading docs, or as a good starting point to first play with Lean before implementing it from scratch.
 
+You may find a live demo here: https://demo.lean-admin.dev/admin
+
 ## Installation
 
 > This demo was originally created for Lean customers, but I decided to open it for others as well — so that they can see how an app written with Lean looks like. So, feel free to look around the codebase, but be aware that the composer installation won't work if you don't have access to the Lean repo.
