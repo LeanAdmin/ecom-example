@@ -23,7 +23,14 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
         return view('dashboard');
     })->name('dashboard');
 
-    Lean::routes([
-        'home' => '/admin/p/home',
-    ]);
+    // If you're running this locally, you may want to use Lean routes
+    // inside an auth route group.
+    // Lean::routes([
+    //     'home' => '/admin/p/home',
+    // ]);
 });
+
+// For the public demo, we use public routes.
+Lean::routes([
+    'home' => '/admin/p/home',
+]);
