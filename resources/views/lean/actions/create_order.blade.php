@@ -56,8 +56,8 @@
                                     ${{ $this->getProductTotal($product) }}
                                 </td>
                                 <td class="px-6 py-4 whitespace-no-wrap text-right text-base leading-5 font-medium">
-                                    <x-lean::button design="danger" wire:click="deleteProduct({{ $index }})">
-                                        Delete
+                                    <x-lean::button design="danger" wire:click="removeProduct({{ $index }})">
+                                        Remove
                                     </x-lean::button>
                                 </td>
                             </tr>
