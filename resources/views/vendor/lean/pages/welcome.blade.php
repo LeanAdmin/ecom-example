@@ -51,7 +51,7 @@
             <div class="flex flex-row">
                 <div class="bg-white w-1/2 rounded-lg p-4 m-2 shadow-sm border-2 border-transparent text-gray-800">
                     <h2 class="mb-2 text-2xl text-black">Open-source</h2>
-                    <p>This demo is not about the design, that's not the point of Lean. It's about <strong>how the code created this admin panel</strong>. Therefore, the demo is open-source. You may find the source code <x-lean::link href="https://github.com/LeanAdmin/ecom-example">here.</x-lean::link></p>
+                    <p>This demo is not about the design, that's not the point of Lean. It's about <strong>how the code created this admin panel</strong>. Therefore, the demo is open-source. You may find the source code <x-lean::link href="https://github.com/LeanAdmin/ecom-example/tree/master/app/Lean">here.</x-lean::link></p>
                 </div>
 
                 <div class="bg-white w-1/2 rounded-lg p-4 m-2 shadow-sm border-2 border-transparent text-gray-800">
