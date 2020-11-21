@@ -3,7 +3,6 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
 
 class OrderProduct extends Model
 {
@@ -13,6 +12,8 @@ class OrderProduct extends Model
 
     public static function booted()
     {
+        parent::booted();
+
         static::creating(function (self $orderProduct) {
             $orderProduct->name ??= $orderProduct->product->name;
             $orderProduct->price ??= $orderProduct->product->price;

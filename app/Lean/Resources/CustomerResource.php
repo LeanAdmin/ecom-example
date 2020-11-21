@@ -19,6 +19,7 @@ class CustomerResource extends LeanResource
         'email',
     ];
     public static string $title = 'name';
+    public static ?int $resultsPerPage = 2;
     public static string $icon = 'heroicon-o-user';
 
     public static function fields(): array

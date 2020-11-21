@@ -18,6 +18,7 @@ class UserResource extends LeanResource
         'name',
         'email',
     ];
+    public static ?int $resultsPerPage = 3;
     public static string $title = 'name';
     public static string $icon = 'heroicon-o-user-circle';
 
