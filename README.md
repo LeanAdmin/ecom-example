@@ -4,6 +4,8 @@ This is an example app for Lean Admin. It can serve as a reference for whenever 
 
 ## Installation
 
+> This demo was originally created for Lean customers, but I decided to open it for others as well — so that they can see how an app written with Lean looks like. So, feel free to look around the codebase, but be aware that the composer installation won't work if you don't have access to the Lean repo.
+
 1. `git clone` the repository
 2. `composer install`
 3. `touch database/database.sqlite` — create the database file (we're using SQLite for simplicity)

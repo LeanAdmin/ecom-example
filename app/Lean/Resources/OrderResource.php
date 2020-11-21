@@ -16,7 +16,6 @@ class OrderResource extends LeanResource
     public static string $model = Order::class;
     public static array $searchable = [
         'id',
-        'text',
     ];
     public static string $title = 'id';
     public static string $icon = 'heroicon-o-document-text';
