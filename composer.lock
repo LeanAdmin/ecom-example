@@ -2036,12 +2036,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:LeanAdmin/lean.git",
-                "reference": "ffd714e70117f38ab95ceccebf10df82fbd97985"
+                "reference": "61974dbde47c33624fecf94b4ec544e617ed42c1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/LeanAdmin/lean/zipball/ffd714e70117f38ab95ceccebf10df82fbd97985",
-                "reference": "ffd714e70117f38ab95ceccebf10df82fbd97985",
+                "url": "https://api.github.com/repos/LeanAdmin/lean/zipball/61974dbde47c33624fecf94b4ec544e617ed42c1",
+                "reference": "61974dbde47c33624fecf94b4ec544e617ed42c1",
                 "shasum": ""
             },
             "require": {
@@ -2076,7 +2076,7 @@
                 "source": "https://github.com/LeanAdmin/lean/tree/master",
                 "issues": "https://github.com/LeanAdmin/lean/issues"
             },
-            "time": "2020-11-21T12:48:28+00:00"
+            "time": "2020-11-21T14:53:58+00:00"
         },
         {
             "name": "livewire/livewire",
