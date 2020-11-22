@@ -16,7 +16,7 @@
         "laravel/jetstream": "^1.6",
         "laravel/sanctum": "^2.6",
         "laravel/tinker": "^2.5",
-        "leanadmin/lean": "9999999-dev",
+        "leanadmin/lean": "*",
         "livewire/livewire": "^2.0"
     },
     "require-dev": {
@@ -64,8 +64,11 @@
     },
     "repositories": {
         "lean": {
-            "type": "vcs",
-            "url": "git@github.com:LeanAdmin/lean.git"
+            "type": "path",
+            "url": "/Users/samuel/Projects/lean/lean",
+            "options": {
+                "symlink": true
+            }
         }
     }
 }

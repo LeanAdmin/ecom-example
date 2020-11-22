@@ -12,9 +12,10 @@ All of the Lean-related files can be found in the [`app/Lean` directory](https:/
 
 1. `git clone` the repository
 2. `cp .env.example .env`
-3. `composer install`
-4. `touch database/database.sqlite` — create the database file (we're using SQLite for simplicity)
-5. `php artisan migrate:fresh --seed` — this will generate quality data + 10 random users
+3. `composer config repositories.lean vcs git@github.com:LeanAdmin/lean.git` — to require the package via git
+4. `composer install`
+5. `touch database/database.sqlite` — create the database file (we're using SQLite for simplicity)
+6. `php artisan migrate:fresh --seed` — this will generate quality data + 10 random users
 
 Now you can visit the app in the browser, register, and then click *Admin Panel* in the dashboard's navigation menu. This will take you to the home page of your Lean admin panel.
 
