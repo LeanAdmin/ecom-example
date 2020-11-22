@@ -21,10 +21,8 @@ class CreateOrderProductsTable extends Migration
 
             $table->integer('quantity');
 
-            $table->unsignedBigInteger('order_id');
-            $table->unsignedBigInteger('product_id');
-            // $table->foreignId('order_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
-            // $table->foreignId('product_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
+            $table->foreignId('order_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
+            $table->foreignId('product_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
 
             $table->timestamps();
         });
