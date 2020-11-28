@@ -40,21 +40,25 @@ class DatabaseSeeder extends Seeder
         // Products
         $mbp16 = Product::create([
             'name' => 'MacBook Pro 16"',
+            'description' => 'The <strong>best</strong> one',
             'price' => 800,
         ]);
 
         $mbp13 = Product::create([
             'name' => 'MacBook Pro 13"',
+            'description' => 'The <strong>small</strong> one',
             'price' => 500,
         ]);
 
         $mba13 = Product::create([
             'name' => 'MacBook Air 13"',
+            'description' => 'The <strong>cheap</strong> one',
             'price' => 300,
         ]);
 
         $stand = Product::create([
             'name' => 'Monitor stand',
+            'description' => 'What an <em>expensive</em> monitor stand.',
             'price' => 1000,
         ]);
 

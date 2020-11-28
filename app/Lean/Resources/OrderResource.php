@@ -9,7 +9,7 @@ use Lean\Fields\Number;
 use Lean\Fields\Relations\BelongsTo;
 use Lean\Fields\Relations\HasMany;
 use Lean\Fields\Text;
-use Lean\Livewire\Resources\LeanResource;
+use Lean\LeanResource;
 
 class OrderResource extends LeanResource
 {
@@ -24,9 +24,25 @@ class OrderResource extends LeanResource
     {
         return [
             ID::make('id'),
-            Text::make('total')->resolveValueUsing(fn ($text, $model) => '$' . $model->total)->stored(false),
-            BelongsTo::make('customer')->parent(CustomerResource::class)->label(__('Buyer')),
-            HasMany::make('products')->of(OrderProductResource::class)->label(__('Products')),
+
+            Text::make('total')
+                ->resolveValueUsing(fn ($text, $model) => '$' . $model->total)
+                ->stored(false),
+
+            BelongsTo::make('customer')
+                ->parent(CustomerResource::class)
+                ->label(__('Buyer')),
+
+            HasMany::make('products')
+                ->of(OrderProductResource::class)
+                ->label(__('Products'))
+                ->fields([
+                    Text::make('name'),
+                    Number::make('price'),
+                    Number::make('quantity'),
+                    Text::make('total')
+                        ->resolveValueUsing(fn ($text, $model) => '$' . $model->total),
+                ]),
         ];
     }
 

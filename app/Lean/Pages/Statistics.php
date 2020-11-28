@@ -6,8 +6,8 @@ use App\Models\Customer;
 use App\Models\Order;
 use App\Models\Product;
 use Illuminate\Database\Eloquent\Collection;
+use Lean\LeanPage;
 use Lean\Livewire\Actions\WithNotifications;
-use Lean\Livewire\Pages\LeanPage;
 
 /**
  * @property-read Collection $orders

@@ -8,7 +8,7 @@ use Lean\Fields\ID;
 use Lean\Fields\Password;
 use Lean\Fields\Relations\HasMany;
 use Lean\Fields\Text;
-use Lean\Livewire\Resources\LeanResource;
+use Lean\LeanResource;
 
 class CustomerResource extends LeanResource
 {

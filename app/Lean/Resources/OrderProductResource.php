@@ -7,7 +7,7 @@ use Lean\Fields\ID;
 use Lean\Fields\Number;
 use Lean\Fields\Relations\BelongsTo;
 use Lean\Fields\Text;
-use Lean\Livewire\Resources\LeanResource;
+use Lean\LeanResource;
 
 class OrderProductResource extends LeanResource
 {

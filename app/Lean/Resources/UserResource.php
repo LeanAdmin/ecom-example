@@ -8,7 +8,7 @@ use Lean\Fields\Email;
 use Lean\Fields\ID;
 use Lean\Fields\Password;
 use Lean\Fields\Text;
-use Lean\Livewire\Resources\LeanResource;
+use Lean\LeanResource;
 
 class UserResource extends LeanResource
 {
