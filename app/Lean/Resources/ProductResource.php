@@ -45,6 +45,11 @@ class ProductResource extends LeanResource
             Image::make('image')
                 ->height('h-56')
                 ->default('https://www.allianceplast.com/wp-content/uploads/2017/11/no-image.png')
+                ->resolveUrlUsing(fn (Image $field, string $path) =>
+                    filter_var($path, FILTER_VALIDATE_URL)
+                    ? $path
+                    : ('/storage/' . $path)
+                )
                 ->storeFileUsing(fn (Image $field, TemporaryUploadedFile $file) => $file->storePublicly('images', ['disk' => 'public']))
                 ->deleteFileUsing(fn (Image $image, string $name) => Storage::disk('public')->delete($name)),
 
