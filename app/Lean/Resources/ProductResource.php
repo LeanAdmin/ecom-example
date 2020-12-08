@@ -51,15 +51,14 @@ class ProductResource extends LeanResource
             Trix::make('description'),
 
             Pikaday::make('updated_at')
-                ->display(['create' => false, 'default' => true])
+                ->display('show', 'edit')
                 ->placeholder('DD.MM.YYYY')
                 ->jsFormat('DD.MM.YYYY')
                 ->phpFormat('d.m.Y')
                 ->default(now()),
 
             Pikaday::make('created_at')
-                ->display(['create' => false, 'default' => true])
-                ->enabled(false)
+                ->display('show')
                 ->placeholder('DD.MM.YYYY')
                 ->jsFormat('DD.MM.YYYY')
                 ->phpFormat('d.m.Y')
