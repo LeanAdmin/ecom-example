@@ -16,8 +16,7 @@
         "laravel/jetstream": "^1.6",
         "laravel/sanctum": "^2.6",
         "laravel/tinker": "^2.5",
-        "leanadmin/lean": "*",
-        "livewire/livewire": "^2.0"
+        "leanadmin/lean": "*"
     },
     "require-dev": {
         "facade/ignition": "^2.5",

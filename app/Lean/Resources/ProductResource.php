@@ -2,8 +2,11 @@
 
 namespace App\Lean\Resources;
 
+use App\Models\Model;
 use App\Models\OrderProduct;
 use App\Models\Product;
+use Illuminate\Support\Facades\Storage;
+use Lean\Fields\File;
 use Lean\Fields\ID;
 use Lean\Fields\Number;
 use Lean\Fields\Pikaday;
@@ -11,6 +14,8 @@ use Lean\Fields\Text;
 use Lean\Fields\Textarea;
 use Lean\Fields\Trix;
 use Lean\LeanResource;
+use Lean\Fields\Image;
+use Livewire\TemporaryUploadedFile;
 
 class ProductResource extends LeanResource
 {
@@ -36,6 +41,12 @@ class ProductResource extends LeanResource
                 'read' => true,
                 'write' => false,
             ]),
+
+            Image::make('image')
+                ->height('h-56')
+                ->default('https://www.allianceplast.com/wp-content/uploads/2017/11/no-image.png')
+                ->storeFileUsing(fn (Image $field, TemporaryUploadedFile $file) => $file->storePublicly('images', ['disk' => 'public']))
+                ->deleteFileUsing(fn (Image $image, string $name) => Storage::disk('public')->delete($name)),
 
             Trix::make('description'),
 
