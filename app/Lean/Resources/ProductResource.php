@@ -53,7 +53,8 @@ class ProductResource extends LeanResource
                 ->storeFileUsing(fn (Image $field, TemporaryUploadedFile $file) => $file->storePublicly('images', ['disk' => 'public']))
                 ->deleteFileUsing(fn (Image $image, string $name) => Storage::disk('public')->delete($name)),
 
-            Trix::make('description'),
+            Trix::make('description')
+                ->required(),
 
             Pikaday::make('updated_at')
                 ->display('show', 'edit')
@@ -63,7 +64,8 @@ class ProductResource extends LeanResource
                 ->default(now()),
 
             Pikaday::make('created_at')
-                ->display('show')
+                ->enabled(false)
+                ->display('read', 'write')
                 ->placeholder('DD.MM.YYYY')
                 ->jsFormat('DD.MM.YYYY')
                 ->phpFormat('d.m.Y')

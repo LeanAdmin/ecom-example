@@ -35,6 +35,7 @@ class OrderResource extends LeanResource
 
             HasMany::make('products')
                 ->of(OrderProductResource::class)
+                ->resultsPerPage(2)
                 ->label(__('Products'))
                 ->fields([
                     Text::make('name'),
